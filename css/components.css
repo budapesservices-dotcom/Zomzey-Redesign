@@ -1,6 +1,6 @@
 /* Component library · Button 12
    Adapted from the Uiverse.io snippet supplied for this project.
-   Theme mapping: Ink base + softened Lime wipe, with the stripe motion preserved. */
+   Theme mapping: Deep Navy base + Cyan wipe, with the stripe motion preserved. */
 
 .library-stage {
   min-height: 100vh;
@@ -24,8 +24,8 @@
   overflow: hidden;
   margin: 0;
   padding: 0.74rem clamp(1.25rem, 2.5vw, 2rem);
-  border: 1px solid var(--color-lime);
-  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
   background-color: var(--color-ink);
   background-image: none;
   color: var(--color-paper);
@@ -66,11 +66,11 @@
   inset: 0;
   background: linear-gradient(
     90deg,
-    var(--color-lime) 25%,
+    var(--color-accent) 25%,
     transparent 0,
     transparent 50%,
-    var(--color-lime) 0,
-    var(--color-lime) 75%,
+    var(--color-accent) 0,
+    var(--color-accent) 75%,
     transparent 0
   );
   content: "";
@@ -85,11 +85,11 @@
     90deg,
     transparent 0,
     transparent 25%,
-    var(--color-lime) 0,
-    var(--color-lime) 50%,
+    var(--color-accent) 0,
+    var(--color-accent) 50%,
     transparent 0,
     transparent 75%,
-    var(--color-lime) 0
+    var(--color-accent) 0
   );
 }
 

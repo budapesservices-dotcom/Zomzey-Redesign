@@ -1,22 +1,22 @@
 # ZOMZEY UI Library
 
-A lightweight, live component library for the ZOMZEY redesign. The library starts with one component: the pattern-wipe btn-12 button, adapted from the Uiverse.io design supplied for this project and recolored with the provisional Signal Network palette.
+A lightweight, live component library for the ZOMZEY redesign. The library starts with one component: the pattern-wipe btn-12 button, adapted from the Uiverse.io design supplied for this project and recolored with the provisional Deep Navy + Cyan palette.
 
 ## Current component
 
-- Primary button: Midnight Ink background, Electric Lime pattern wipe, pill radius, uppercase label.
-- Interaction: two striped layers slide in from opposite directions on hover.
+- Primary button: Deep Navy background, Cyan pattern wipe, softly squared corners, uppercase label.
+- Interaction: two striped layers slide in from opposite directions on hover, with ease-in-out timing.
 - Accessibility: keyboard focus visibility, disabled-state styling, and reduced-motion support.
 
 ## Design tokens
 
 The current palette is a proposal for this redesign, not a claim about ZOMZEY's official brand colors:
 
-- Midnight Ink: #191622
-- Electric Lime: #D6FF3F
-- Digital Cobalt: #665BFF
-- Warm Paper: #F6F4ED
-- Signal Coral: #FF7557
+- Deep Navy: #142536
+- Signal Cyan: #45C5D8
+- Digital Blue: #4169E1
+- Cool Paper: #F4F7FA
+- Warm Amber: #E59B63
 
 ## Structure
 

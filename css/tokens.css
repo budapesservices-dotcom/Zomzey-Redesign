@@ -1,12 +1,12 @@
-/* Provisional Signal Network design tokens. Validate brand colors before final delivery. */
+/* Provisional Deep Navy + Cyan palette. Validate official ZOMZEY brand colors before final delivery. */
 :root {
   color-scheme: light;
 
-  --color-ink: #191622;
-  --color-lime: #b9d56c;
-  --color-cobalt: #665bff;
-  --color-paper: #f6f4ed;
-  --color-coral: #ff7557;
+  --color-ink: #142536;
+  --color-accent: #45c5d8;
+  --color-cobalt: #4169e1;
+  --color-paper: #f4f7fa;
+  --color-coral: #e59b63;
   --color-white: #ffffff;
 
   --color-text: var(--color-ink);
