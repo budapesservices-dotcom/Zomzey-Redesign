@@ -1,0 +1,48 @@
+/* Shared components. Add a component here when it is reused across sections. */
+.eyebrow {
+  margin-bottom: var(--space-8);
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.status-line {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-size: 0.875rem;
+}
+
+.status-indicator {
+  width: 0.55rem;
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--color-cobalt);
+  box-shadow: 0 0 0 0.25rem rgb(102 91 255 / 14%);
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-8);
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+  transition: color var(--motion-fast) var(--ease-standard);
+}
+
+.text-link:hover { color: #5144e8; }
+
+.project-note {
+  margin: var(--space-16) 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}
