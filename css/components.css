@@ -1,6 +1,6 @@
 /* Component library · Button 12
    Adapted from the Uiverse.io snippet supplied for this project.
-   Theme mapping: Ink base + Lime wipe, with the original stripe motion preserved. */
+   Theme mapping: Ink base + softened Lime wipe, with the stripe motion preserved. */
 
 .library-stage {
   min-height: 100vh;
@@ -23,20 +23,21 @@
   justify-content: center;
   overflow: hidden;
   margin: 0;
-  padding: 0.8rem clamp(1.5rem, 4vw, 3rem);
-  border: 2px solid var(--color-lime);
+  padding: 0.74rem clamp(1.25rem, 2.5vw, 2rem);
+  border: 1px solid var(--color-lime);
   border-radius: var(--radius-pill);
   background-color: var(--color-ink);
   background-image: none;
   color: var(--color-paper);
   font-family: var(--font-sans);
   font-size: 100%;
-  font-weight: 900;
-  line-height: 1.5;
+  font-weight: 700;
+  line-height: 1.45;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
   cursor: pointer;
+  transition: transform var(--motion-fast) var(--ease-standard);
   -webkit-appearance: button;
   -webkit-tap-highlight-color: transparent;
   -webkit-mask-image: -webkit-radial-gradient(#000, #fff);

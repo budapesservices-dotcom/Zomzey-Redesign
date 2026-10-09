@@ -3,7 +3,7 @@
   color-scheme: light;
 
   --color-ink: #191622;
-  --color-lime: #d6ff3f;
+  --color-lime: #b9d56c;
   --color-cobalt: #665bff;
   --color-paper: #f6f4ed;
   --color-coral: #ff7557;
@@ -27,6 +27,6 @@
   --radius-pill: 999rem;
 
   --motion-fast: 160ms;
-  --motion-base: 220ms;
-  --ease-standard: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --motion-base: 300ms;
+  --ease-standard: cubic-bezier(0.42, 0, 0.58, 1);
 }
