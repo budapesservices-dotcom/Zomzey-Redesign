@@ -1,19 +1,20 @@
-/* Provisional Human Signal palette: expressive, warm, and trustworthy. */
+/* Provisional Clear Signal palette: confident, readable, and contemporary. */
 :root {
   color-scheme: light;
 
-  --color-ink: #20243a;
-  --color-accent: #ff765e;
-  --color-accent-soft: #ffa38f;
-  --color-prism: #c9bfff;
-  --color-cobalt: #575be8;
-  --color-paper: #f7f4ef;
+  --color-ink: #1a2438;
+  --color-accent: #3156d8;
+  --color-accent-mid: #2849b9;
+  --color-accent-deep: #1d367f;
+  --color-accent-soft: #dce5ff;
+  --color-paper: #f5f7fb;
   --color-white: #ffffff;
-  --color-surface: #fffdfa;
+  --color-surface: #ffffff;
+  --color-muted: #667085;
 
   --color-text: var(--color-ink);
   --color-bg: var(--color-paper);
-  --color-focus: var(--color-cobalt);
+  --color-focus: var(--color-accent);
 
   --font-sans: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -29,6 +30,6 @@
   --radius-pill: 999rem;
 
   --motion-fast: 160ms;
-  --motion-base: 320ms;
+  --motion-base: 300ms;
   --ease-standard: cubic-bezier(0.42, 0, 0.58, 1);
 }
