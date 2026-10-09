@@ -1,0 +1,38 @@
+/* Signal Network is provisional pending a brand audit. */
+:root {
+  color-scheme: light;
+  --color-ink: #191622;
+  --color-lime: #d6ff3f;
+  --color-cobalt: #665bff;
+  --color-paper: #f6f4ed;
+  --color-coral: #ff7557;
+  --color-white: #ffffff;
+  --color-text: #191622;
+  --color-text-muted: #696772;
+  --color-border: rgb(25 22 34 / 14%);
+
+  --font-sans: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Arial", Helvetica, sans-serif;
+
+  --container-max: 1120px;
+  --page-gutter: clamp(1.25rem, 5vw, 4.5rem);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 1rem 3rem rgb(25 22 34 / 8%);
+  --motion-fast: 160ms;
+  --motion-base: 260ms;
+  --ease-standard: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
