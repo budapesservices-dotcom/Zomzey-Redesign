@@ -46,3 +46,208 @@
   color: var(--color-text-muted);
   font-size: 0.8rem;
 }
+
+/* CP3 · Reusable buttons.
+   Pattern-wipe interaction adapted from the user-provided btn-12 reference. */
+.btn,
+.btn * {
+  box-sizing: border-box;
+}
+
+.btn {
+  --btn-wipe-color: var(--color-ink);
+  --btn-border-hover: var(--color-lime);
+  --btn-before-start: 100%;
+  --btn-after-start: -100%;
+
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  overflow: hidden;
+  padding: 0.8rem 1.65rem;
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-pill);
+  background: var(--color-lime);
+  color: var(--color-paper);
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+  line-height: 1.15;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    transform var(--motion-fast) var(--ease-standard),
+    border-color var(--motion-fast) var(--ease-standard),
+    box-shadow var(--motion-fast) var(--ease-standard);
+}
+
+.btn::before,
+.btn::after {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-image: linear-gradient(
+    90deg,
+    var(--btn-wipe-color) 25%,
+    transparent 0,
+    transparent 50%,
+    var(--btn-wipe-color) 0,
+    var(--btn-wipe-color) 75%,
+    transparent 0
+  );
+  content: "";
+  pointer-events: none;
+  transform: translateY(var(--btn-before-start));
+  transition: transform 220ms var(--ease-standard);
+}
+
+.btn::after {
+  background-image: linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 25%,
+    var(--btn-wipe-color) 0,
+    var(--btn-wipe-color) 50%,
+    transparent 0,
+    transparent 75%,
+    var(--btn-wipe-color) 0
+  );
+  transform: translateY(var(--btn-after-start));
+}
+
+.btn__label,
+.btn__icon {
+  position: relative;
+  z-index: 1;
+  color: var(--color-paper);
+  mix-blend-mode: difference;
+}
+
+.btn__icon {
+  display: inline-grid;
+  width: 1.25rem;
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+  place-items: center;
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform var(--motion-fast) var(--ease-standard);
+}
+
+.btn:hover {
+  border-color: var(--btn-border-hover);
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-2px);
+}
+
+.btn:hover::before,
+.btn:hover::after {
+  transform: translateY(0);
+}
+
+.btn:hover .btn__icon {
+  transform: translate(2px, -2px);
+}
+
+.btn:active {
+  box-shadow: none;
+  transform: translateY(0) scale(0.985);
+}
+
+.btn:active .btn__icon {
+  transform: translate(0, 0);
+}
+
+.btn--primary {
+  background: var(--color-lime);
+  border-color: var(--color-ink);
+  --btn-border-hover: var(--color-lime);
+}
+
+.btn--secondary {
+  background: var(--color-paper);
+  border-color: var(--color-paper);
+  --btn-border-hover: var(--color-cobalt);
+}
+
+.btn--secondary .btn__label,
+.btn--secondary .btn__icon {
+  color: var(--color-paper);
+}
+
+.btn--text {
+  min-height: 2.75rem;
+  padding: 0.65rem 0.25rem;
+  border-color: transparent;
+  background: transparent;
+  color: var(--color-paper);
+  text-transform: none;
+  letter-spacing: 0;
+  --btn-wipe-color: transparent;
+  --btn-border-hover: transparent;
+  box-shadow: none;
+}
+
+.btn--text::before,
+.btn--text::after {
+  display: none;
+}
+
+.btn--text .btn__label,
+.btn--text .btn__icon {
+  color: currentColor;
+  mix-blend-mode: normal;
+}
+
+.btn--text:hover {
+  color: var(--color-lime);
+  box-shadow: none;
+}
+
+.btn--text:hover .btn__icon {
+  transform: translate(2px, -2px);
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
+  transform: none;
+}
+
+.btn:disabled::before,
+.btn:disabled::after,
+.btn[aria-disabled="true"]::before,
+.btn[aria-disabled="true"]::after {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btn::before,
+  .btn::after,
+  .btn__icon {
+    transition: none;
+  }
+
+  .btn:hover,
+  .btn:active {
+    transform: none;
+  }
+
+  .btn:hover .btn__icon,
+  .btn:active .btn__icon {
+    transform: none;
+  }
+}

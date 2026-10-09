@@ -1,4 +1,4 @@
-/* Style guide presentation only. Product components will be implemented in CP3. */
+/* Style guide page layout. Reusable button behavior lives in components.css. */
 .guide-body {
   background: var(--color-paper);
   color: var(--color-ink);
@@ -453,14 +453,7 @@
 .guide-interaction-copy strong { font-family: var(--font-display); font-size: 1.25rem; }
 .guide-interaction-copy p { margin: var(--space-2) 0 0; color: rgb(246 244 237 / 68%); font-size: var(--type-small); }
 .guide-button-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); }
-.demo-button { display: inline-flex; min-height: 3rem; align-items: center; justify-content: center; gap: var(--space-3); padding: 0.75rem 1.25rem; border: 1px solid transparent; border-radius: var(--radius-pill); font-size: var(--type-small); font-weight: 700; text-decoration: none; transition: transform var(--motion-fast) var(--ease-standard), background-color var(--motion-fast) var(--ease-standard), color var(--motion-fast) var(--ease-standard), border-color var(--motion-fast) var(--ease-standard); }
-.demo-button:hover { transform: translateY(-2px); }
-.demo-button-primary { background: var(--color-lime); color: var(--color-ink); }
-.demo-button-primary:hover { background: #e1ff75; }
-.demo-button-secondary { border-color: rgb(246 244 237 / 38%); color: var(--color-paper); }
-.demo-button-secondary:hover { border-color: var(--color-lime); color: var(--color-lime); }
-.demo-button-text { color: var(--color-paper); padding-inline: 0.5rem; }
-.demo-button-text:hover { color: var(--color-lime); }
+
 
 .guide-motion-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); margin-top: var(--space-6); }
 .guide-motion-grid > div { display: grid; justify-items: start; gap: var(--space-2); padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-md); }
@@ -525,5 +518,5 @@
   .motion-fast,
   .motion-base,
   .motion-slow { animation: none; transform: scaleX(0.7); }
-  .demo-button { transition: none; }
+  .btn { transition: none; }
 }

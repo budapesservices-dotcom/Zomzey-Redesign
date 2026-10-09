@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/tokens.css">
   <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/components.css">
   <link rel="stylesheet" href="./css/style-guide.css">
 </head>
 <body class="guide-body">
@@ -22,7 +23,7 @@
       <span>ZOMZEY <small>DESIGN SYSTEM / 01</small></span>
     </a>
     <div class="guide-header-meta">
-      <span class="guide-status"><span></span> CP2 · Design foundation</span>
+      <span class="guide-status"><span></span> CP3 · Button components</span>
       <a href="./index.html" class="guide-back">Back to preview ↗</a>
     </div>
   </header>
@@ -163,14 +164,14 @@
         <div class="guide-section-head">
           <p class="guide-eyebrow">05 / Interaction rules</p>
           <h2>Every signal has a reason.</h2>
-          <p>State changes must be clear and consistent. This section demonstrates the intended visual language; reusable production components follow in CP3.</p>
+          <p>A bold lime action uses a split stripe-wipe to invert into ink on hover. Shared button classes also define keyboard focus, active feedback, and reduced-motion behavior.</p>
         </div>
         <div class="guide-interaction-panel">
           <div class="guide-interaction-copy"><strong>Primary action</strong><p>Hover the button or navigate to it with a keyboard to inspect its focus ring.</p></div>
           <div class="guide-button-row">
-            <a href="#type" class="demo-button demo-button-primary">Explore network <span aria-hidden="true">↗</span></a>
-            <a href="#layout" class="demo-button demo-button-secondary">See how it works</a>
-            <a href="#shape" class="demo-button demo-button-text">Learn more <span aria-hidden="true">↗</span></a>
+            <a href="#type" class="btn btn--primary"><span class="btn__label">Explore network</span><span class="btn__icon" aria-hidden="true">↗</span></a>
+            <a href="#layout" class="btn btn--secondary"><span class="btn__label">See how it works</span><span class="btn__icon" aria-hidden="true">↗</span></a>
+            <a href="#shape" class="btn btn--text"><span class="btn__label">Learn more</span><span class="btn__icon" aria-hidden="true">↗</span></a>
           </div>
         </div>
         <div class="guide-motion-grid">
@@ -186,7 +187,7 @@
   <footer class="guide-footer">
     <div class="guide-shell guide-footer-inner">
       <span>ZOMZEY / SIGNAL NETWORK</span>
-      <span>CP2 · Tokens and visual foundations</span>
+      <span>CP3 · Button system</span>
       <a href="./index.html">Back to project preview ↑</a>
     </div>
   </footer>

@@ -4,7 +4,7 @@ A responsive homepage redesign concept for [zomzey.io](https://zomzey.io/), buil
 
 ## Project status
 
-**Phase:** design-system foundation (CP2).  
+**Phase:** reusable button components (CP3).  
 **Concept direction:** Signal Network (provisional).  
 **Note:** this is a work in progress, not the finished contest submission. The palette is a design proposal, not confirmed official brand colors.
 
@@ -12,7 +12,7 @@ A responsive homepage redesign concept for [zomzey.io](https://zomzey.io/), buil
 
 - **[PROJECT_BRIEF.md](./PROJECT_BRIEF.md)** — goals, constraints, brand direction, and acceptance criteria.
 - **[CONTENT_MAP.md](./CONTENT_MAP.md)** — inventory of current homepage content and proposed hierarchy.
-- **[style-guide.html](./style-guide.html)** — live visual reference for color, typography, spacing, shape, and motion tokens.
+- **[style-guide.html](./style-guide.html)** — live visual reference for design tokens and the reusable button system.
 
 ## Technology
 
@@ -29,7 +29,7 @@ GitHub Pages cannot execute PHP or other server-side application logic. Authenti
 - `css/tokens.css` — centralized design values and semantic aliases.
 - `css/base.css` — reset, typography foundation, and accessible focus behavior.
 - `css/layout.css` — shared layout primitives.
-- `css/components.css` — reusable product UI components (next phase).
+- `css/components.css` — shared UI components, including primary, secondary, and text buttons.
 - `css/sections.css` — homepage section compositions.
 - `css/responsive.css` — responsive overrides.
 - `css/motion.css` — shared motion rules.
@@ -50,7 +50,7 @@ The repository includes a GitHub Actions workflow at `.github/workflows/static.y
 ## Working rules
 
 1. Audit before removing existing functionality.
-2. Group all checkpoint changes into one commit.
+2. Group all checkpoint changes into one commit; never commit once per file.
 3. Verify design tokens and components before assembling sections.
 4. Finish one section at a time, then test desktop and mobile.
 5. Use real platform links where a static demo cannot reproduce server-backed features.
