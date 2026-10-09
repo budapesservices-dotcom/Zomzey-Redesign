@@ -1,0 +1,9 @@
+/* Responsive rules. Add breakpoints when validated by actual layouts. */
+@media (max-width: 600px) {
+  .project-status h1 {
+    max-width: 10ch;
+    font-size: clamp(2.8rem, 15vw, 4.5rem);
+  }
+
+  .project-note { margin-top: var(--space-12); }
+}
