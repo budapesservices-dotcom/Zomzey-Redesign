@@ -1,19 +1,19 @@
-/* Provisional Obsidian Prism palette. Confirm official ZOMZEY brand colors before final delivery. */
+/* Provisional Human Signal palette: expressive, warm, and trustworthy. */
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 
-  --color-ink: #090b16;
-  --color-accent: #5efce8;
-  --color-prism: #a58bff;
-  --color-cobalt: #5b7cff;
-  --color-paper: #f3f6ff;
-  --color-coral: #ff8c69;
+  --color-ink: #20243a;
+  --color-accent: #ff765e;
+  --color-accent-soft: #ffa38f;
+  --color-prism: #c9bfff;
+  --color-cobalt: #575be8;
+  --color-paper: #f7f4ef;
   --color-white: #ffffff;
-  --color-surface: #12172a;
+  --color-surface: #fffdfa;
 
-  --color-text: var(--color-paper);
-  --color-bg: var(--color-ink);
-  --color-focus: var(--color-prism);
+  --color-text: var(--color-ink);
+  --color-bg: var(--color-paper);
+  --color-focus: var(--color-cobalt);
 
   --font-sans: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -24,11 +24,11 @@
   --space-6: 1.5rem;
   --space-8: 2rem;
 
-  --radius-sm: 0.625rem;
-  --radius-md: 1rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
   --radius-pill: 999rem;
 
   --motion-fast: 160ms;
-  --motion-base: 360ms;
-  --ease-standard: cubic-bezier(0.42, 0, 0.18, 1);
+  --motion-base: 320ms;
+  --ease-standard: cubic-bezier(0.42, 0, 0.58, 1);
 }

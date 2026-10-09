@@ -1,30 +1,31 @@
 # ZOMZEY UI Library
 
-A lightweight, live component library for the ZOMZEY redesign. The first component is the pattern-wipe btn-12 button, adapted from the Uiverse.io design supplied for this project and restyled with the provisional Obsidian Prism palette.
+A lightweight component library for the ZOMZEY homepage redesign. This checkpoint refines the primary action using a **Human Signal** visual direction: distinctive and expressive, while remaining warm, clear, and trustworthy for a marketplace that connects people, creators, brands, shops, and communities.
 
 ## Current component
 
-- Primary button: deep-space navy surface, ion-cyan and ultraviolet pattern wipe, squared corners, and a controlled luminous edge.
-- Interaction: two striped layers slide in from opposite directions with smooth ease-in-out timing; hover adds a restrained dual-color glow.
+- Primary action: deep ink surface, a slim coral edge, and a two-layer coral/lilac pattern wipe.
+- Interaction: the stripes arrive from opposite directions with 320 ms ease-in-out timing. Hover adds a small lift and a restrained shadow, not a neon glow.
 - Accessibility: keyboard focus visibility, disabled-state styling, and reduced-motion support.
+- Label: “Explore opportunities”, aligned with the marketplace's existing language.
 
-## Design tokens
+## Provisional design tokens
 
-The palette is a creative direction for this redesign, not a claim about ZOMZEY's official brand colors:
+These are design proposals, not confirmed official ZOMZEY brand colours:
 
-- Obsidian: #090B16
-- Ion Cyan: #5EFCE8
-- Ultraviolet Prism: #A58BFF
-- Digital Blue: #5B7CFF
-- Soft White: #F3F6FF
-- Warm Signal: #FF8C69
+- Ink: #20243A
+- Signal Coral: #FF765E
+- Soft Coral: #FFA38F
+- Lilac: #C9BFFF
+- Digital Violet: #575BE8
+- Warm Paper: #F7F4EF
 
-## Structure
+## Design rationale
 
-The homepage intentionally demonstrates one button at the top-left. The component CSS is isolated in css/components.css; shared values live in css/tokens.css. The hover effect uses CSS only.
+The contest asks for a homepage that feels modern and unique without losing professionalism, trust, or intuitive navigation. The current dark, grid-heavy cyberpunk treatment has therefore been replaced by a light editorial canvas, a human-centred accent palette, and a memorable but restrained button interaction.
 
-## Hosting
+This repository currently demonstrates the button component only. It is not yet the full contest submission. The separate deliverables still include desktop and mobile homepage mockups, a concise style guide, and notes explaining the layout and interaction cues.
 
-Static website deployed by GitHub Pages. No framework, build step, or paid design platform is required.
+## Structure and hosting
 
-Future components should be added to this library only after their visuals and interactions have been approved.
+The homepage intentionally demonstrates one button at the top-left. Component CSS is isolated in css/components.css; shared values live in css/tokens.css. The hover effect uses CSS only. GitHub Pages hosts the static preview without a framework or build step.
