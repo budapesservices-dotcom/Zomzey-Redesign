@@ -1,0 +1,22 @@
+/* Motion should clarify state and respect user preferences. */
+@media (prefers-reduced-motion: no-preference) {
+  .dot-mark {
+    animation: signal-drift 12s linear infinite alternate;
+  }
+}
+
+@keyframes signal-drift {
+  from { background-position: 0 0; }
+  to { background-position: 36px 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
