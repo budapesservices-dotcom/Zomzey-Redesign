@@ -1,11 +1,27 @@
 /* Component library · Button 12
    Adapted from the Uiverse.io snippet supplied for this project.
-   Theme mapping: Deep Navy base + Cyan wipe, with the stripe motion preserved. */
+   Theme: Obsidian Prism — deep-space navy, ion cyan, and ultraviolet. */
 
 .library-stage {
+  position: relative;
+  isolation: isolate;
   min-height: 100vh;
   min-height: 100svh;
-  padding: 24px;
+  padding: clamp(20px, 3vw, 36px);
+  overflow: hidden;
+  background-color: var(--color-ink);
+  background-image:
+    linear-gradient(rgba(165, 182, 226, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(165, 182, 226, 0.045) 1px, transparent 1px),
+    radial-gradient(ellipse at 8% 8%, rgba(94, 252, 232, 0.15), transparent 34%),
+    radial-gradient(ellipse at 92% 88%, rgba(165, 139, 255, 0.16), transparent 36%),
+    linear-gradient(145deg, #090b16 0%, #0e1325 52%, #090b16 100%);
+  background-size:
+    42px 42px,
+    42px 42px,
+    auto,
+    auto,
+    auto;
 }
 
 .btn-12,
@@ -23,21 +39,28 @@
   justify-content: center;
   overflow: hidden;
   margin: 0;
-  padding: 0.74rem clamp(1.25rem, 2.5vw, 2rem);
-  border: 1px solid var(--color-accent);
+  padding: 0.78rem clamp(1.25rem, 2.5vw, 2rem);
+  border: 1px solid rgba(94, 252, 232, 0.78);
   border-radius: var(--radius-sm);
-  background-color: var(--color-ink);
-  background-image: none;
+  background: linear-gradient(135deg, #151b30 0%, #0c1121 100%);
   color: var(--color-paper);
   font-family: var(--font-sans);
-  font-size: 100%;
-  font-weight: 700;
+  font-size: 0.94rem;
+  font-weight: 750;
+  letter-spacing: 0.045em;
   line-height: 1.45;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
   cursor: pointer;
-  transition: transform var(--motion-fast) var(--ease-standard);
+  box-shadow:
+    0 0 0 1px rgba(94, 252, 232, 0.08),
+    0 12px 34px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition:
+    transform var(--motion-fast) var(--ease-standard),
+    border-color var(--motion-base) var(--ease-standard),
+    box-shadow var(--motion-base) var(--ease-standard);
   -webkit-appearance: button;
   -webkit-tap-highlight-color: transparent;
   -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
@@ -65,36 +88,55 @@
   z-index: 0;
   inset: 0;
   background: linear-gradient(
-    90deg,
+    110deg,
+    var(--color-accent) 0%,
     var(--color-accent) 25%,
-    transparent 0,
+    transparent 25%,
     transparent 50%,
-    var(--color-accent) 0,
-    var(--color-accent) 75%,
-    transparent 0
+    var(--color-prism) 50%,
+    var(--color-prism) 75%,
+    transparent 75%,
+    transparent 100%
   );
   content: "";
   pointer-events: none;
   transform: translateY(var(--progress, 100%));
-  transition: transform var(--motion-base) var(--ease-standard);
+  transition:
+    transform var(--motion-base) var(--ease-standard),
+    opacity var(--motion-base) var(--ease-standard);
 }
 
 .btn-12::after {
   --progress: -100%;
+  opacity: 0.86;
   background: linear-gradient(
-    90deg,
-    transparent 0,
+    110deg,
+    transparent 0%,
     transparent 25%,
-    var(--color-accent) 0,
-    var(--color-accent) 50%,
-    transparent 0,
+    var(--color-prism) 25%,
+    var(--color-prism) 50%,
+    transparent 50%,
     transparent 75%,
-    var(--color-accent) 0
+    var(--color-accent) 75%,
+    var(--color-accent) 100%
   );
 }
 
+.btn-12:hover,
+.btn-12:focus-visible {
+  border-color: var(--color-prism);
+  box-shadow:
+    0 0 0 1px rgba(165, 139, 255, 0.24),
+    0 0 28px rgba(94, 252, 232, 0.2),
+    0 0 58px rgba(165, 139, 255, 0.18),
+    0 14px 36px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
 .btn-12:hover::before,
-.btn-12:hover::after {
+.btn-12:hover::after,
+.btn-12:focus-visible::before,
+.btn-12:focus-visible::after {
   --progress: 0;
 }
 
