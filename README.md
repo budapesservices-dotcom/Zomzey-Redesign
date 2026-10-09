@@ -4,14 +4,15 @@ A responsive homepage redesign concept for [zomzey.io](https://zomzey.io/), buil
 
 ## Project status
 
-**Phase:** discovery and architecture scaffold.  
+**Phase:** design-system foundation (CP2).  
 **Concept direction:** Signal Network (provisional).  
-**Note:** this is a work in progress, not the finished contest submission. Final brand colors, typography, composition, and content hierarchy must be validated.
+**Note:** this is a work in progress, not the finished contest submission. The palette is a design proposal, not confirmed official brand colors.
 
 ## Project documents
 
-- **PROJECT_BRIEF.md** — goals, constraints, brand direction, and acceptance criteria.
-- **CONTENT_MAP.md** — inventory of the current homepage and proposed section order.
+- **[PROJECT_BRIEF.md](./PROJECT_BRIEF.md)** — goals, constraints, brand direction, and acceptance criteria.
+- **[CONTENT_MAP.md](./CONTENT_MAP.md)** — inventory of current homepage content and proposed hierarchy.
+- **[style-guide.html](./style-guide.html)** — live visual reference for color, typography, spacing, shape, and motion tokens.
 
 ## Technology
 
@@ -25,9 +26,15 @@ GitHub Pages cannot execute PHP or other server-side application logic. Authenti
 
 ## Folder conventions
 
-- `css/` — stylesheets separated by responsibility.
-- `js/main.js` — lightweight entry point.
-- `js/modules/` — self-contained interaction modules.
+- `css/tokens.css` — centralized design values and semantic aliases.
+- `css/base.css` — reset, typography foundation, and accessible focus behavior.
+- `css/layout.css` — shared layout primitives.
+- `css/components.css` — reusable product UI components (next phase).
+- `css/sections.css` — homepage section compositions.
+- `css/responsive.css` — responsive overrides.
+- `css/motion.css` — shared motion rules.
+- `css/style-guide.css` — only the presentation of the design-system page.
+- `js/main.js` and `js/modules/` — modular JavaScript entry point and interactions.
 - `assets/images/`, `assets/videos/`, `assets/icons/` — project assets.
 
 Shared visual values belong in design tokens. Add a module or stylesheet only when it has a clear responsibility.
@@ -43,7 +50,8 @@ The repository includes a GitHub Actions workflow at `.github/workflows/static.y
 ## Working rules
 
 1. Audit before removing existing functionality.
-2. Verify shared design tokens and components before assembling sections.
-3. Finish one section at a time, then test desktop and mobile.
-4. Use real platform links where a static demo cannot reproduce server-backed features.
-5. Never present sample content or simulated metrics as live ZOMZEY data.
+2. Group all checkpoint changes into one commit.
+3. Verify design tokens and components before assembling sections.
+4. Finish one section at a time, then test desktop and mobile.
+5. Use real platform links where a static demo cannot reproduce server-backed features.
+6. Never present sample content or simulated metrics as live ZOMZEY data.
